@@ -1,0 +1,194 @@
+.featuredProjects,
+.projectGrid {
+  display: grid;
+  gap: 34px;
+}
+
+.projectCard {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--translucent-card);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-7px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-card);
+}
+
+.featuredProject {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.15fr);
+}
+
+.projectImageLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 360px;
+  min-height: 360px;
+  overflow: hidden;
+  background: var(--accent-soft);
+}
+
+.projectImage {
+  display: block;
+  width: 100%;
+  height: 360px;
+  transition: transform 0.45s ease;
+}
+
+.projectImageLink:hover .projectImage {
+  transform: scale(1.025);
+}
+
+/* Wide dashboard: show the complete screenshot */
+.projectImage.te {
+  object-fit: contain;
+  object-position: center;
+  padding: 12px;
+  background: #f2f4f7;
+}
+
+/* Sleep Journal: cropping works well because the UI fills the frame */
+.projectImage.sleep {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Wide Tableau dashboard: show the complete screenshot */
+.projectImage.f1 {
+  object-fit: contain;
+  object-position: center;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.projectCardBody {
+  padding: 38px;
+}
+
+.projectMeta {
+  display: flex;
+  gap: 12px;
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.projectCard h3 {
+  margin: 17px 0;
+  color: var(--text-strong);
+  font-size: clamp(1.55rem, 3vw, 2.4rem);
+  letter-spacing: -0.035em;
+}
+
+.projectCardBody > p {
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.cardActions {
+  margin-top: 27px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 750;
+}
+
+.cardActions a {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cardActions a:hover {
+  color: var(--accent);
+  transform: translateX(3px);
+}
+
+.pageHero {
+  padding: 120px 0 80px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pageHero h1,
+.caseHero h1 {
+  max-width: 930px;
+  font-size: clamp(3.4rem, 7vw, 6.6rem);
+}
+
+.pageHeroCopy {
+  max-width: 720px;
+  margin-top: 30px;
+}
+
+.pageHeroCopy p {
+  margin: 0 0 25px;
+}
+
+.filterBar {
+  padding: 38px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filterButton {
+  padding: 10px 17px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.filterButton:hover,
+.filterButton.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.projectGrid {
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 130px;
+}
+
+.projectGrid .projectCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectGrid .projectImageLink {
+  min-height: 300px;
+}
+
+.projectGrid .projectImage {
+  height: 300px;
+}
+
+.projectGrid .projectCardBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.projectGrid .cardActions {
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.projectReveal {
+  height: 100%;
+}
+
+.projectReveal .projectCard {
+  height: 100%;
+}

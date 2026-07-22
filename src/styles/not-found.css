@@ -1,0 +1,14 @@
+.notFound {
+  min-height: 70vh;
+  padding: 130px 0;
+}
+
+.notFound h1 {
+  max-width: 850px;
+  font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.notFound > p:not(.eyebrow) {
+  margin: 28px 0;
+  color: var(--text-muted);
+}

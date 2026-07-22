@@ -1,0 +1,400 @@
+.contactPage {
+  padding-bottom: 110px;
+}
+
+.contactHero {
+  max-width: 900px;
+  padding: 110px 0 100px;
+}
+
+.contactHero h1 {
+  max-width: 850px;
+  margin: 0;
+  color: var(--text-strong);
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.contactHeroCopy {
+  max-width: 760px;
+  margin: 32px 0 0;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.contactHeroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.contactHeroActions .primaryButton,
+.contactHeroActions .secondaryButton,
+.contactClosing .primaryButton {
+  gap: 9px;
+}
+
+.availabilitySection {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr);
+  gap: clamp(45px, 7vw, 90px);
+  align-items: center;
+  padding: 75px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.availabilityIntro h2 {
+  max-width: 520px;
+  margin: 0;
+  color: var(--text-strong);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.05em;
+}
+
+.availabilityIntro > p:not(.sectionLabel) {
+  max-width: 620px;
+  margin: 24px 0 0;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.availabilityPanel {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--translucent-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.availabilityStatus {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 25px 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+.statusIndicator {
+  width: 13px;
+  height: 13px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px var(--accent-soft);
+}
+
+.availabilityStatus div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.availabilityStatus span,
+.availabilityDetails span {
+  color: var(--text-muted);
+  font-family: monospace;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.availabilityStatus strong {
+  color: var(--text-strong);
+  font-size: 1.02rem;
+}
+
+.availabilityDetails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.availabilityDetails > div {
+  min-height: 142px;
+  padding: 24px 21px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.availabilityDetails > div + div {
+  border-left: 1px solid var(--border);
+}
+
+.availabilityDetails svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--accent);
+}
+
+.availabilityDetails > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.availabilityDetails strong {
+  color: var(--text-strong);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.contactSection {
+  padding: 125px 0 0;
+}
+
+.contactSection .sectionHeading {
+  max-width: 870px;
+  margin-bottom: 55px;
+}
+
+.opportunityGrid,
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.opportunityCard,
+.contactCard {
+  min-height: 100%;
+  padding: 29px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--translucent-surface);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.opportunityCard:hover,
+.contactCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.contactIcon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.opportunityCard:hover .contactIcon,
+.contactCard:hover .contactIcon {
+  transform: translateY(-2px) scale(1.06);
+  border-color: var(--border-strong);
+}
+
+.opportunityCard h3,
+.contactCard h3 {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.opportunityCard p,
+.contactCard p {
+  margin: 16px 0 0;
+  color: var(--text-muted);
+  line-height: 1.72;
+}
+
+.contactCardLink {
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-dark);
+  font-weight: 800;
+  transition:
+    color 0.2s ease,
+    gap 0.2s ease;
+}
+
+.contactCardLink:hover {
+  color: var(--accent);
+  gap: 12px;
+}
+
+.contactCardLink span {
+  transition: transform 0.2s ease;
+}
+
+.contactCardLink:hover span {
+  transform: translateX(2px);
+}
+
+.contactMethodsSection {
+  padding-top: 110px;
+}
+
+.contactClosing {
+  margin-top: 125px;
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: 20px;
+  background: var(--translucent-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.contactClosing > div {
+  max-width: 650px;
+}
+
+.contactClosing h2 {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.contactClosing p:not(.sectionLabel) {
+  margin: 20px 0 0;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.contactClosing .primaryButton {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .opportunityGrid,
+  .contactGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .availabilitySection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .contactPage {
+    padding-bottom: 80px;
+  }
+
+  .contactHero {
+    padding: 82px 0 75px;
+  }
+
+  .contactHero h1 {
+    font-size: clamp(3rem, 13vw, 5rem);
+  }
+
+  .availabilitySection {
+    padding: 60px 0;
+  }
+
+  .availabilityDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .availabilityDetails > div {
+    min-height: auto;
+  }
+
+  .availabilityDetails > div + div {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .contactSection {
+    padding-top: 90px;
+  }
+
+  .contactClosing {
+    margin-top: 95px;
+    padding: 36px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactHeroActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contactHeroActions .primaryButton,
+  .contactHeroActions .secondaryButton {
+    width: 100%;
+  }
+
+  .opportunityGrid,
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .opportunityCard,
+  .contactCard {
+    padding: 25px;
+  }
+
+  .contactClosing {
+    padding: 30px 25px;
+  }
+
+  .contactClosing .primaryButton {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opportunityCard,
+  .contactCard,
+  .contactIcon,
+  .contactCardLink,
+  .contactCardLink span {
+    transition: none;
+  }
+
+  .opportunityCard:hover,
+  .contactCard:hover,
+  .opportunityCard:hover .contactIcon,
+  .contactCard:hover .contactIcon,
+  .contactCardLink:hover span {
+    transform: none;
+  }
+}
+
+.contactIcon {
+  font-weight: 800;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}

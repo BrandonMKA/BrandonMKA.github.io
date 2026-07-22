@@ -1,0 +1,159 @@
+@media (max-width: 950px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .portraitFrame {
+    justify-self: start;
+  }
+
+  .statusGrid,
+  .interestGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statusGrid > div:nth-child(3),
+  .interestGrid article:nth-child(3) {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .statusGrid > div:nth-child(4),
+  .interestGrid article:nth-child(4) {
+    border-top: 1px solid var(--border);
+  }
+
+  .aboutGrid,
+  .featuredProject,
+  .caseLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .caseSidebar {
+    position: static;
+    padding-bottom: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 720px) {
+  .navbar,
+  .pageShell,
+  .siteFooter {
+    width: min(88%, var(--max-width));
+  }
+
+  .projectImageLink,
+  .projectGrid .projectImageLink {
+    min-height: 240px;
+  }
+
+  .projectImage,
+  .projectGrid .projectImage {
+    height: 240px;
+  }
+
+  .navbar {
+    min-height: 72px;
+  }
+
+  .brandRole {
+    display: none;
+  }
+
+  .navLinks {
+    gap: 0;
+  }
+
+  .navLink {
+    padding: 9px;
+    font-size: 0.78rem;
+  }
+
+  .themeToggle {
+    width: 38px;
+    min-height: 38px;
+    padding: 0;
+  }
+
+  .themeToggleLabel {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 0 80px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.8rem);
+  }
+
+  .buttonRow {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .portraitNote {
+    right: -8px;
+    bottom: 24px;
+  }
+
+  .statusGrid,
+  .interestGrid,
+  .skillGrid,
+  .projectGrid,
+  .contactGrid,
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statusGrid > div + div,
+  .interestGrid article + article {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .section {
+    padding: 95px 0;
+  }
+
+  .splitHeading,
+  .experienceTop,
+  .resumeRow,
+  .siteFooter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .timelineItem {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .date,
+  .resumeRow > span {
+    white-space: normal;
+  }
+
+  .projectGrid {
+    padding-bottom: 95px;
+  }
+
+  .projectCardBody {
+    padding: 28px 24px;
+  }
+
+  .galleryGrid img:first-child {
+    grid-column: auto;
+  }
+
+  .siteFooter {
+    padding: 35px 0;
+  }
+}
