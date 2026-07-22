@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import { contact, experience, projects, skills } from "../data/siteData";
 import Reveal from "../components/Reveal";
+import JourneyTimeline from "../components/JourneyTimeline";
 
 export default function Home() {
   const featuredProjects = projects.filter((project) => project.featured);
@@ -98,6 +99,15 @@ export default function Home() {
             </strong>
           </aside>
         </div>
+      </Reveal>
+
+      <Reveal as="section" className="journeySection">
+        <div className="sectionHeading">
+          <p className="sectionLabel">My journey</p>
+          <h2>The experiences that brought me here.</h2>
+        </div>
+
+        <JourneyTimeline />
       </Reveal>
 
       <Reveal as="section" className="section">

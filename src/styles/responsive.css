@@ -36,6 +36,15 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  .journeyTimeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 52px 28px;
+  }
+
+  .journeyLine {
+    display: none;
+  }
 }
 
 @media (max-width: 720px) {
@@ -155,5 +164,57 @@
 
   .siteFooter {
     padding: 35px 0;
+  }
+
+  .journeySection {
+    padding: 10px 0 95px;
+  }
+
+  .journeyTimeline {
+    display: block;
+    margin-top: 45px;
+  }
+
+  .journeyLine {
+    display: block;
+    top: 4px;
+    bottom: 4px;
+    left: 6px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .journeyReveal + .journeyReveal {
+    margin-top: 34px;
+  }
+
+  .journeyMilestone {
+    display: grid;
+    grid-template-columns: 14px minmax(0, 1fr);
+    column-gap: 24px;
+    text-align: left;
+  }
+
+  .journeyYear {
+    grid-column: 2;
+    margin-bottom: 10px;
+  }
+
+  .journeyDot {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: start;
+    margin-top: 4px;
+  }
+
+  .journeyContent {
+    grid-column: 2;
+    margin-top: 0;
+  }
+
+  .journeyContent p {
+    max-width: none;
+    margin-left: 0;
   }
 }
